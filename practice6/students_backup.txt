@@ -1,0 +1,5 @@
+Name: Sezim Turgynbek
+Age: 17
+City: Almaty
+University: KBTU
+Major: Computer Science

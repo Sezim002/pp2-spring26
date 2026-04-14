@@ -23,7 +23,7 @@ if x > 10:
     print("but not above 20.")
 
 #4 problem 
-core = 85
+score = 85
 attendance = 90
 submitted = True
 
