@@ -15,8 +15,8 @@ hand_r        = pygame.image.load(os.path.join(base, 'hand_right.png')).convert_
 
 resized_image = pygame.transform.scale(image_surface, (800, 600))
 res_mickey    = pygame.transform.scale(mickey, (350, 350))
-hand_l_base   = pygame.transform.scale(hand_l, (80, 80))  
-hand_r_base   = pygame.transform.scale(hand_r, (100, 100))  
+hand_l_base   = pygame.transform.scale(hand_l, (100, 100))  
+hand_r_base   = pygame.transform.scale(hand_r, (120, 120))  
 
 CLOCK_CENTER  = (600, 320)  
 MICKEY_CENTER = (600, 320)   
@@ -46,7 +46,7 @@ while not done:
     s = now.second
 
     
-    hours_angle   = (h / 12) * 360 + (m / 60) * 30    
+    seconds_angle   = (s/60) * 360   
     minutes_angle = (m / 60) * 360 + (s / 60) * 6     
 
     screen.fill(WHITE)
@@ -57,8 +57,8 @@ while not done:
     mic_rect = res_mickey.get_rect(center=MICKEY_CENTER)
     screen.blit(res_mickey, mic_rect)
 
-    draw_hand(screen, hand_r_base, hours_angle,   CLOCK_CENTER, length_ratio=0.45)  
-    draw_hand(screen, hand_l_base, minutes_angle, CLOCK_CENTER, length_ratio=0.50)  
+    draw_hand(screen, hand_r_base, minutes_angle,   CLOCK_CENTER, length_ratio=0.45)  
+    draw_hand(screen, hand_l_base, seconds_angle, CLOCK_CENTER, length_ratio=0.50)  
 
     pygame.display.flip()
     clock.tick(60)

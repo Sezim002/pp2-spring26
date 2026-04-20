@@ -86,3 +86,5 @@ SELECT * FROM phonebook;
 -- deleting
 CALL deleting_contacts(p_name := 'Sezim');
 SELECT * FROM phonebook;
+
+DELETE FROM phonebook WHERE name = ("qwerty");
